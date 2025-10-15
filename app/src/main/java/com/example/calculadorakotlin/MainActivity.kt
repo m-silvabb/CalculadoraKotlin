@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             insets
         }
 
-        btnAdd = findViewById(R.id.btn_add
+        btnAdd = findViewById(R.id.btn_add)
         btnSub = findViewById(R.id.btn_subtraction)
         btnMultiply = findViewById(R.id.btn_multiplication)
         btnDivision = findViewById(R.id.btn_division)

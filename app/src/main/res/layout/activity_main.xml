@@ -5,68 +5,131 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F3F4F6"
     android:orientation="vertical"
-    android:layout_margin="20dp"
+    android:gravity="center"
     tools:context=".MainActivity">
-    
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/et_a"
-        android:layout_margin="20dp"
-        android:hint="Enter a"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/et_b"
-        android:layout_margin="20dp"
-        android:hint="Enter b"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btn_add"
-            android:layout_margin="4dp"
-            android:text="+"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_subtraction"
-            android:layout_margin="4dp"
-            android:text="-"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_multiplication"
-            android:layout_margin="4dp"
-            android:text="*"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_division"
-            android:layout_margin="4dp"
-            android:text="/"/>
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center">
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calculadora"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:layout_marginBottom="16dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_power"
-        android:layout_margin="4dp"
-        android:text="^" />
+            <EditText
+                android:id="@+id/et_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Digite o valor de A"
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text"
+                android:textColor="#000"
+                android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/result_tv"
-        android:layout_width="327dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:gravity="center"
-        android:text="Result"
-        android:textSize="24sp" />
+            <EditText
+                android:id="@+id/et_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:hint="Digite o valor de B"
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:alignmentMode="alignMargins"
+                android:rowCount="2"
+                android:layout_marginBottom="20dp">
+
+                <Button
+                    android:id="@+id/btn_add"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="+"
+                    android:textSize="18sp"
+                    android:layout_margin="6dp"
+                    android:backgroundTint="#4CAF50"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btn_subtraction"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="-"
+                    android:textSize="18sp"
+                    android:layout_margin="6dp"
+                    android:backgroundTint="#FF9800"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btn_multiplication"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="×"
+                    android:textSize="18sp"
+                    android:layout_margin="6dp"
+                    android:backgroundTint="#03A9F4"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btn_division"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="÷"
+                    android:textSize="18sp"
+                    android:layout_margin="6dp"
+                    android:backgroundTint="#9C27B0"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/btn_power"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="^"
+                    android:textSize="18sp"
+                    android:layout_margin="6dp"
+                    android:backgroundTint="#E91E63"
+                    android:textColor="#FFFFFF" />
+
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/result_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:gravity="center"
+                android:text="Resultado: "
+                android:textColor="#212121"
+                android:textSize="22sp"
+                android:background="#E0E0E0"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
 </LinearLayout>
